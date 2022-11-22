@@ -16,6 +16,13 @@ server.get('/asteriods',(req,res)=>{
         res.send(paramters.id);
 });
 
+server.get('/asteriods/{id}',(req,res)=>{
+    
+    res.send('working with id');
+});
+
+
+
 
 server.listen(PORT,console.log(`Listening to Port:${PORT}`)); 
         //async function listen(PORT,callback)
