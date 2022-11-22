@@ -1,10 +1,13 @@
-
+/******************************************************************************* *********/
 console.log(global.process.platform) //tell OS in your machine
 const environment = global.process.env;
 
-//Events : Event loop : Non blocking Operations runs on Main Thread and long asnchronous process is given to seperate thread. 
 
-const {EventEmitter} = require('events')
+
+/*************************************Events *********************************************/
+//Event loop : Non blocking Operations runs on Main Thread and long asnchronous process is given to seperate thread. 
+
+import {EventEmitter} from 'events';
 const eventEmitter =  new EventEmitter();
 eventEmitter.on('sleeptime',()=>console.log('Time to go to bed'));
 
@@ -22,7 +25,8 @@ timeInterval = 5000;
 
 
 
-/**************************File System****************************/
+
+/**********************************File System********************************************/
 /*const {readFile,readFileSync} = require('fs');
 let reader = 'hello';
 readFile('./hello.txt','utf-8',(err,txt)=>{
@@ -33,7 +37,9 @@ readFile('./hello.txt','utf-8',(err,txt)=>{
 setTimeout(()=>console.log(reader),5000);*/
 
 //With the help of promises
-const {readFile} = require('fs').promises;
+//const {readFile} = require('fs').promises;
+
+import {readFile} from 'fs/promises'
 
 async function read(){
         const file = await readFile('./hello.txt','utf8');
@@ -41,3 +47,4 @@ async function read(){
 }
 read()
 
+/************************************************************************************** */
