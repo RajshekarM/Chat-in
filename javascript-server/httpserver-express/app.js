@@ -1,5 +1,6 @@
 import express from 'express';
-import bodyParser from 'body-parser'
+import bodyParser from 'body-parser';
+import authentication from './middleware/authentication.js';
 import serviceRoute from './routes/serviceRoute.js';
 import userRoute from './routes/userRoute.js';
 
@@ -28,7 +29,8 @@ app.use(bodyParser.json());
 
 
 //A route will match any path that follows its path immediately with a “/”.
-app.use('/user',userRoute);
+
+app.use('/user',authentication.verifyUser,userRoute);
 app.use('/service',serviceRoute);
 
 export default app;
