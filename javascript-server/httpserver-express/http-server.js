@@ -2,7 +2,8 @@ import http  from 'http';
 import app from './app.js';
 
 
-//Starting server, then server instantiating app FUNCTION OBJECT. 
+//Create Server and pass Express Application to http server. 
+//Any requests comes to PORT 8080,it passes request to this application internally by calling the intended method.
 const server = http.createServer(app);
 
 const PORT = 8080;
