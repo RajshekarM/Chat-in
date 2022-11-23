@@ -25,11 +25,9 @@ stack:[ { route: '', handle: [Function] },
 app.use(express.static('./public'));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(cors());
 
 
 //A route will match any path that follows its path immediately with a “/”.
-app.use('',(req,res)=>res.send('Home page'));
 app.use('/user',userRoute);
 app.use('/service',serviceRoute);
 
