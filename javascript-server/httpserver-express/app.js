@@ -1,11 +1,18 @@
 import express from 'express';
+import serviceRoute from './routes/serviceRoute.js';
+import userRoute from './routes/userRoute.js';
 
 
-const userRoute = express.Router();
+const app = new express();
+
+const router = new express.Router();
+//For understanding: creating a new object for Router object 
+//which is a member of express function object.
 
 
-userRoute.get('/',(req,res)=>res.send('Welcome to User Routing'));
 
-userRoute.get('/login',(req,res)=>res.send('You are Logged in'));
+//using the Router object created in userRoute. Pass the Express's Router object to use function
+app.use('/user',userRoute);
+app.use('/service',serviceRoute);
 
-export default userRoute;
+export default app;
