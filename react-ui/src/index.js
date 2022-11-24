@@ -8,9 +8,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //passing the function components Raj to the render method. render method inserts the elements 
 //into index.html 
 root.render(
-  <React.StrictMode>
     <App/>
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

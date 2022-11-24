@@ -1,0 +1,25 @@
+
+.chat-nav{
+    display: flex;
+    justify-content: space-between;
+    height:100px;
+    background-color: aqua;
+}
+.chat-body{
+    display: flex;
+    border:2px solid red;
+    min-height:500px;
+    color:blue;
+    justify-content: flex-start;
+}
+
+.chat-body-friends{
+    flex:1;
+    border:2px solid blue;
+    width:250px;
+    min-height: 300px;
+}
+.chat-body-conversation{
+    flex:3;
+    width:500px;
+}

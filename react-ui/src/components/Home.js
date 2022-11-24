@@ -10,7 +10,7 @@ const Home = () =>{
     
    return (
    <div>
-    {userState?<Chat setUserState={setUserState}/>:<SignIn setUserState={setUserState}/>}
+    {userState===true?<Chat setUserState={setUserState}/>:<SignIn setUserState={setUserState}/>}
     </div>); 
 }
 

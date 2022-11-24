@@ -1,6 +1,6 @@
 
 import{useEffect, useState} from 'react'
-
+import './SignIn.css'
 
 const SignIn=({setUserState})=>{
 
@@ -10,7 +10,8 @@ const SignIn=({setUserState})=>{
     }
 
    return (
-   <div>
+   <div className='sign-in'>
+        <h1>Please Login</h1>
         <form>
            <label>UserName</label> 
            <input type={'text'}/>
