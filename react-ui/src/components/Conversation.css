@@ -1,0 +1,13 @@
+.conversation{
+
+    min-height:300px;
+    border:2px solid green;
+    color:red;
+} 
+
+.conversation-history{
+    border:2px dashed cadetblue;
+    min-height:250px;
+    min-width: 250px;
+
+}
